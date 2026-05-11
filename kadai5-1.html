@@ -5,6 +5,31 @@
   <title>演習課題5-1：カウンタ</title>
 </head>
 <body>
-  
+
+  <h1>カウンタ</h1>
+
+  <p id="count">0</p>
+
+  <button id="countBtn">カウント</button>
+  <button id="resetBtn">リセット</button>
+
+  <script>
+    let count = 0;
+
+    const countText = document.getElementById("count");
+    const countBtn = document.getElementById("countBtn");
+    const resetBtn = document.getElementById("resetBtn");
+
+    countBtn.addEventListener("click", function () {
+      count++;
+      countText.textContent = count;
+    });
+
+    resetBtn.addEventListener("click", function () {
+      count = 0;
+      countText.textContent = count;
+    });
+  </script>
+
 </body>
 </html>
